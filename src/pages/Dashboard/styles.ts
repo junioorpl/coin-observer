@@ -23,13 +23,13 @@ export const MainCoins = styled.div`
 `;
 
 export const ObservedCoins = styled.ul`
-  margin: 16px 0;
+  margin: 8px 0;
   list-style-type: none;
 
   > div {
     display: block;
     flex: 1;
-    margin-top: 24px;
+
     flex-direction: column;
 
     padding: 0 8px;

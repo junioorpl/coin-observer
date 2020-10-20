@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Coin Observer
+
+This ReactJS application helps you track the value of your favorite cryptocurrencies in real time.
+
+![CoinObserverScreenShot](/screenshots/coinobserver-ss.png)
 
 ## Available Scripts
 
