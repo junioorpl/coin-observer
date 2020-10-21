@@ -98,6 +98,11 @@ export const DescriptionDiv = styled.div`
     margin-bottom: 4px;
   }
 
+  p {
+    max-height: 48px;
+    overflow: auto;
+  }
+
   span {
     font-size: 14px;
     margin-right: 4px;
