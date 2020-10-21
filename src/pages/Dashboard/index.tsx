@@ -12,7 +12,7 @@ import api from '../../service/api';
 
 import {
   Container,
-  MainCoins,
+  GlobalDataDiv,
   ObservedCoins,
   Loading,
   MyCoinsDiv,
@@ -105,7 +105,7 @@ const Dashboard: React.FC = () => {
       )}
       <Container>
         <Header toggleAddCoin={toggleAddCoin} />
-        <MainCoins>
+        <GlobalDataDiv>
           <h2>Global Data</h2>
           {loading ? (
             <Loading>
@@ -115,7 +115,7 @@ const Dashboard: React.FC = () => {
           ) : (
               <GlobalData data={globalData} />
             )}
-        </MainCoins>
+        </GlobalDataDiv>
         <ObservedCoins>
           <MyCoinsDiv>
             <h1>My Coins</h1>

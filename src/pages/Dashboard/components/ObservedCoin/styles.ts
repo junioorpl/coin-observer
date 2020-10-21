@@ -47,7 +47,8 @@ export const Container = styled.li`
     }
   }
 
-  button {
+  button,
+  a {
     display: flex;
     height: 48px;
     width: 48px;
@@ -55,11 +56,13 @@ export const Container = styled.li`
     border-radius: 50%;
     transition: background 0.5s;
 
+    color: #333;
+
     align-items: center;
     place-content: center;
 
     &:hover {
-      background: #fff;
+      color: #f28016;
     }
 
     svg {
@@ -73,7 +76,7 @@ export const Change = styled.strong<TitleProps>`
   ${props =>
     props.value > 0
       ? css`
-          color: #00ff19;
+          color: #37c337;
         `
       : css`
           color: #ff0059;

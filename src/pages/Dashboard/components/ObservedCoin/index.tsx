@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BiTrash } from 'react-icons/bi';
 
+import { Link } from 'react-router-dom';
+import { FiInfo, FiTrash2 } from 'react-icons/fi';
 import { Change, Container } from './styles';
 import { dynamicImport } from '../../../../utils/dynamicImport';
 import { useStorage } from '../../../../hooks/Storage';
@@ -53,9 +54,14 @@ const ObservedCoins: React.FC<IProps> = ({ ticker }: IProps) => {
           </Change>
         </span>
       </div>
-      <button type="button" onClick={() => deleteCoin(ticker.id)}>
-        <BiTrash />
-      </button>
+      <div>
+        <Link to={`/coin/${ticker.id}`}>
+          <FiInfo />
+        </Link>
+        <button type="button" onClick={() => deleteCoin(ticker.id)}>
+          <FiTrash2 />
+        </button>
+      </div>
     </Container>
   );
 };

@@ -29,6 +29,12 @@ export const Container = styled.div`
         color: #111;
         height: 32px;
         width: 32px;
+        transition: 0.2s;
+
+        :active {
+          transform: rotate(-180deg);
+          color: #f28016;
+        }
       }
     }
 

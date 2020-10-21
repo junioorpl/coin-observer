@@ -10,9 +10,10 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 1158px;
   margin: 0 auto;
+  padding: 0 20px;
 `;
 
-export const MainCoins = styled.div`
+export const GlobalDataDiv = styled.div`
   margin-top: 24px;
 
   > div {
@@ -23,7 +24,6 @@ export const MainCoins = styled.div`
 `;
 
 export const ObservedCoins = styled.ul`
-  margin: 8px 0;
   list-style-type: none;
 
   > div {
@@ -81,6 +81,10 @@ export const MyCoinsDiv = styled.title`
   justify-content: space-between;
 
   align-items: center;
+
+  h1 {
+    margin-top: 16px;
+  }
 
   aside {
     font-size: 14px;

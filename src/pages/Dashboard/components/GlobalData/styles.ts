@@ -32,7 +32,7 @@ export const CapChange = styled.strong<CapChangeProps>`
   ${props =>
     props.value > 0
       ? css`
-          color: #00ff19;
+          color: #37c337;
         `
       : css`
           color: #ff0059;

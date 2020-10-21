@@ -3,8 +3,9 @@ import { FiDelete, FiHardDrive, FiRefreshCcw } from 'react-icons/fi';
 
 import Header from '../../components/Header';
 import { useSettings } from '../../hooks/Settings';
+import CategoryTabs from './components/CategoryTabs';
 
-import { CategoryDiv, Container, SettingsDiv, OptionsDiv } from './styles';
+import { Container, SettingsDiv, OptionsDiv } from './styles';
 
 interface ITabs {
   tab: 'storage' | 'refresh' | 'wipe';
@@ -40,35 +41,7 @@ const Config: React.FC = () => {
         <h2>Loading settings...</h2>
       ) : (
           <SettingsDiv>
-            <CategoryDiv>
-              <div>
-                <FiHardDrive />
-                <button
-                  type="button"
-                  onClick={() => handleTabChange({ tab: 'storage' })}
-                >
-                  Storage
-              </button>
-              </div>
-              <div>
-                <FiRefreshCcw />
-                <button
-                  type="button"
-                  onClick={() => handleTabChange({ tab: 'refresh' })}
-                >
-                  Auto-refresh
-              </button>
-              </div>
-              <div>
-                <FiDelete />
-                <button
-                  type="button"
-                  onClick={() => handleTabChange({ tab: 'wipe' })}
-                >
-                  Wipe data
-              </button>
-              </div>
-            </CategoryDiv>
+            <CategoryTabs handleTabChange={handleTabChange} />
             <OptionsDiv>
               {currentTab.tab === 'storage' && (
                 <>
