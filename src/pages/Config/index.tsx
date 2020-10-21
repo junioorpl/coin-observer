@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { FiDelete, FiHardDrive, FiRefreshCcw } from 'react-icons/fi';
 
 import Header from '../../components/Header';
 import { useSettings } from '../../hooks/Settings';
@@ -21,7 +20,7 @@ const Config: React.FC = () => {
   } = useSettings();
 
   const [loading, setLoading] = useState(true);
-  const [currentTab, setCurrentTab] = useState<ITabs>({ tab: 'refresh' });
+  const [currentTab, setCurrentTab] = useState<ITabs>({ tab: 'storage' });
 
   useEffect(() => {
     setLoading(false);

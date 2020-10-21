@@ -3,6 +3,7 @@
 This ReactJS application helps you track the value of your favorite cryptocurrencies in real time.
 
 ![CoinObserverScreenShot](/screenshots/coinobserver-ss.png)
+![CoinObserverScreenShot2](/screenshots/coinobserver-ss2.png)
 
 ## Available Scripts
 
