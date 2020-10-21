@@ -105,20 +105,21 @@ const Dashboard: React.FC = () => {
       )}
       <Container>
         <Header toggleAddCoin={toggleAddCoin} />
-        <GlobalDataDiv>
-          <h2>Global Data</h2>
-          {loading ? (
-            <Loading>
-              <VscLoading />
-              <span>Getting global info...</span>
-            </Loading>
-          ) : (
+        <h1>Global Data</h1>
+        {loading ? (
+          <Loading>
+            <VscLoading />
+            <span>Getting global info...</span>
+          </Loading>
+        ) : (
+            <GlobalDataDiv>
               <GlobalData data={globalData} />
-            )}
-        </GlobalDataDiv>
+            </GlobalDataDiv>
+          )}
+
+        <h1>My Coins</h1>
         <ObservedCoins>
           <MyCoinsDiv>
-            <h1>My Coins</h1>
             {lastUpdated !== '' && <aside>{`Updated at ${lastUpdated}`}</aside>}
           </MyCoinsDiv>
           {my_coins.length > 0 ? (

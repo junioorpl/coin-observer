@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
+  padding: 0 8px;
 
   background: #eee;
   border: 1px solid #ddd;
@@ -25,6 +26,13 @@ export const Container = styled.div`
     strong {
       font-size: 24px;
     }
+  }
+
+  @media only screen and (max-width: 926px) {
+    display: block;
+    overflow: auto;
+    max-height: 80px;
+    text-align: center;
   }
 `;
 

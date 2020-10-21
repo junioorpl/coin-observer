@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { VscLoading } from 'react-icons/vsc';
 import StringMask from 'string-mask';
+import Footer from '../../components/Footer';
 
 import Header from '../../components/Header';
 import api from '../../service/api';
@@ -117,6 +118,7 @@ const Coin: React.FC<IProps> = ({ match, history }: IProps) => {
             )}
           </>
         )}
+      <Footer />
     </Container>
   );
 };

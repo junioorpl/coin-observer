@@ -19,6 +19,7 @@ export const Container = styled.div`
 
   > button {
     background: transparent;
+    border: none;
     height: 100vh;
     width: 100vw;
   }
@@ -27,7 +28,7 @@ export const Container = styled.div`
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding: 16px;
+    padding: 8px 16px;
 
     border: 1px solid #ddd;
     border-radius: 16px;
@@ -64,7 +65,6 @@ export const Container = styled.div`
     div {
       display: flex;
       flex-direction: column;
-      padding: 0 8px;
 
       overflow: auto;
 
@@ -95,7 +95,10 @@ export const LoadingDiv = styled.div`
     svg {
       width: 20px;
       height: 20px;
-      animation: ${loadingAnimation} 2.5s linear infinite;
+
+      &:first-child {
+        animation: ${loadingAnimation} 2.5s linear infinite;
+      }
     }
   }
 `;

@@ -45,7 +45,7 @@ const ObservedCoins: React.FC<IProps> = ({ ticker }: IProps) => {
       <div>
         <span>
           Current value:&nbsp;
-          <strong>{`$${ticker.quotes.USD.price.toFixed(4)}`}</strong>
+          <strong>{`$${ticker.quotes.USD.price}`}</strong>
         </span>
         <span>
           24 hour change:&nbsp;

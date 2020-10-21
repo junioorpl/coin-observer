@@ -44,7 +44,7 @@ export const Active = styled.div<IProps>`
     ${props =>
     props.isActive
       ? css`
-            color: #222;
+            color: #37c337;
           `
       : css`
             color: #ff0059;

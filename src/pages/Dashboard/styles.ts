@@ -11,16 +11,14 @@ export const Container = styled.div`
   max-width: 1158px;
   margin: 0 auto;
   padding: 0 20px;
+
+  h1 {
+    margin-top: 24px;
+  }
 `;
 
 export const GlobalDataDiv = styled.div`
-  margin-top: 24px;
-
-  > div {
-    padding: 0 8px;
-    display: flex;
-    flex-direction: row;
-  }
+  margin-top: 8px;
 `;
 
 export const ObservedCoins = styled.ul`
@@ -32,8 +30,8 @@ export const ObservedCoins = styled.ul`
 
     flex-direction: column;
 
-    padding: 0 8px;
-    max-height: 520px;
+    min-height: 550px;
+    max-height: 550px;
     overflow: auto;
 
     text-align: center;
@@ -58,10 +56,10 @@ export const ObservedCoins = styled.ul`
 `;
 
 export const Loading = styled.div`
-  display: flex;
-  place-content: center;
-  align-items: center;
-  margin-top: 24px;
+  display: block;
+  padding: 32px;
+
+  text-align: center;
 
   span {
     font-size: 24px;

@@ -1,5 +1,23 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
+const pulseAnimation = keyframes`
+    0% {
+        transform: scale(0.95);
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        border-radius: 50%;
+        box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+    }`;
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -29,11 +47,10 @@ export const Container = styled.div`
         color: #111;
         height: 32px;
         width: 32px;
-        transition: 0.2s;
+        transform: scale(1);
 
         :active {
-          transform: rotate(-180deg);
-          color: #f28016;
+          animation: ${pulseAnimation} 0.2s normal;
         }
       }
     }
