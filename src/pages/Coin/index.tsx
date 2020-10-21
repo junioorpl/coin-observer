@@ -62,13 +62,12 @@ const Coin: React.FC<IProps> = ({ match, history }: IProps) => {
       const res2 = await api.get(`/tickers/${match.params.id}`);
       setCoin({ ...res1.data, ...res2.data });
 
-      if (res1.status !== 200 && res2.status) {
+      if (res1.status !== 200 || res2.status !== 200) {
         history.push('/');
       }
     }
 
     getDetailedTicker();
-    console.log(coin);
   }, []); //eslint-disable-line
 
   useEffect(() => {
@@ -86,8 +85,6 @@ const Coin: React.FC<IProps> = ({ match, history }: IProps) => {
       setFormattedPrice(mask.apply(newPrice));
       setLoading(false);
     }
-
-    console.log(coin);
   }, [coin]);
 
   return (
