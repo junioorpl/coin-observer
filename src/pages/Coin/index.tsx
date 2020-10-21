@@ -81,7 +81,7 @@ const Coin: React.FC<IProps> = ({ match, history }: IProps) => {
     if (coin !== undefined) {
       const newPrice = String(coin.quotes.USD.price).replace('.', '');
 
-      const mask = new StringMask('##,##0.00000000', { reverse: true });
+      const mask = new StringMask('##.##0,00000000', { reverse: true });
       setFormattedPrice(mask.apply(newPrice));
       setLoading(false);
     }
